@@ -1,0 +1,40 @@
+<pre>
+Below is a little discussion about the vulnerability i identified. 
+
+Normally i would release an advisory, but so much time has passed and this will
+be sufficient. The reason for this is to show vendors how NOT to respond. I know 
+other people who would have created exploit code and publicly released it after
+doing their own security audit of the software, all because of the vendors attitude
+lol. Additionally, i was tired of their company website appearing in Google when my 
+site was searched. 
+
+The company can be found at: 
+HTTP [://] peak software [.] com [.] au
+
+Basically they had an administration area that was vulnerable to SQL injection. 
+They labeled this area, "PeakCMS". Not sure if they still use the same version, 
+but anyway i kindly called them up informing them of the issue. Basically all 
+they said was "why were you looking for this?", in a hostile tone... I kindly 
+gave them my name and number. Never heard from them again. 
+
+I never posted the issue as an advisory for a number of reasons, which i honestly
+cannot be bothered repeating now. 
+
+The vulnerability was a basic SQL injection authentication bypass vulnerability. 
+Nothing difficult to exploit at all. I'm surprised someone else hadn't found it 
+already. 
+
+Furthermore, i wouldn't be surprised if the vulnerability still exists in
+current versions. 
+
+In the "notes" section of the link entry of my website i stated:
+"There are still more, undisclosed vulnerabilities in this software". 
+
+I never performed a full test of the package, more so just through an innocent single
+quote in here and there. I identified another SQL Injection bug in the software. 
+Quiet easy to identify. Just imagine what a web application scanner would reveal. 
+
+I suggest if you run this software, you should quarantine the package (and associated 
+modules) and have a professional security audit performed, then give the company 2 
+years to fix the issues identified. 
+</pre>

@@ -1,0 +1,31 @@
+Secunia Advisory:   	 SA16881  	  
+Release Date: 	2005-09-21
+Last Update: 	2005-10-10
+
+Critical: 	
+Moderately critical
+Impact: 	Manipulation of data
+Where: 	From remote
+Solution Status: 	Vendor Patch
+
+Software:	Simplog 0.x
+
+CVE reference:	CVE-2005-3076 (Secunia mirror)
+
+Description:
+r0ut3r has discovered some vulnerabilities in Simplog, which can be exploited by malicious people to conduct SQL injection attacks.
+
+Input passed to the "pid", "blogid", "cid", and "m" parameters in "archive.php", and the "blogid" parameter in "blogadmin.php" isn't properly sanitised before being used in a SQL query. This can be exploited to manipulate SQL queries by injecting arbitrary SQL code.
+
+The vulnerabilities have been confirmed in version 0.9.1. Other versions may also be affected.
+
+Solution:
+Update to version 0.9.2.
+http://prdownloads.sourceforge.net/simplog/simplog-0.9.2.tar.gz?downloads
+
+Provided and/or discovered by:
+r0ut3r
+
+Changelog:
+2005-10-04: Added CVE reference.
+2005-10-10: Updated "Solution" section.

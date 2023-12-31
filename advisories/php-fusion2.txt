@@ -1,0 +1,27 @@
+Origan http://www.securiteam.com/unixfocus/6Z00E0UC0I.html 
+----------------------------------------------------------- 
+
+PHP-Fusion SQL Injection (index.php)  	12 Dec. 2004
+ 
+ Summary
+"PHP-Fusion is an all-in-one content management system (CMS) written in PHP4. It uses a MySQL database to store all of it's content such as News, Articles, Forum Posts, Shoutbox Posts and more."
+
+An SQL injection vulnerability was found in PHP-Fusion that allows inserting SQL commands into existing queries.
+ 
+Credit:
+The information has been provided by Royce Marks (shady.underground at gmail.com).
+ 
+ Details
+Vulnerable Systems:
+ * PHP-Fusion version 4.01 and prior
+
+Immune Systems:
+ * PHP-Fusion version 5.0
+
+The SQL injection is possible due to improper validation of the 'rowstart' parameter passed to the index.php script. A simple example is suffice to demonstrate the behavior:
+index.php?rowstart='
+
+As simple a vulnerability as this is, it is a very dangerous vulnerability when a malicious user is able to alter the original SQL queries and manipulate the backend database server.
+
+Vendor Status:
+The vendors have been informed and the new upcoming release 5.0 is not vulnerable. Users of PHP-Fusion are encouraged to upgrade to the newer version as soon as possible.

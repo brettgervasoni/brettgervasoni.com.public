@@ -1,0 +1,25 @@
+.logo-container .logo {
+    overflow: none;
+    border-radius: 0;
+    border: none;
+    width: 240px;
+    float: left;
+}
+
+.presentation-macbook {
+    margin-left: 0;
+}
+
+.landing-page .section-demo .row:first-child {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.no-shadow {
+    border-radius: 10px;
+    box-shadow: none !important;
+}
+
+.logos .list-unstyled li img {
+    opacity: 0.86;
+}

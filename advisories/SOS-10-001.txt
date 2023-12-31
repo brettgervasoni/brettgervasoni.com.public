@@ -1,0 +1,42 @@
+Mirror of: http://www.senseofsecurity.com.au/advisories/SOS-10-001
+//////////////////////////////////////////////////////////////////
+
+TheGreenBow VPN Client Local Stack Overflow
+
+Sense of Security - Security Advisory - SOS-10-001
+
+Release Date.                  21-Jan-2010
+Last Update.                   03-Feb-2010
+Vendor Notification Date.      11-Dec-2009
+Product.                       TheGreenBow VPN Client
+Platform.                      Microsoft Windows
+Affected versions.             4.65.003, 4.51.001 verified and 
+                               possibly others.
+Severity Rating.               High
+Impact.                        System access
+Attack Vector.                 Local
+Solution Status.               Vendor patch
+CVE reference.                 CVE-2010-0392
+
+Details.
+TheGreenBow is an IPsec VPN client that sets up a secure channel
+for data transport.
+
+TheGreenBow VPN Client is vulnerable to a local stack based buffer
+overflow, which can lead to the compromise of a vulnerable system.
+ 
+The vulnerability is caused due to a boundary error when processing
+certain sections of tgb (policy) files. Passing an overly long 
+string to "OpenScriptAfterUp" will trigger the overflow. 
+
+Successful exploitation results in the execution of arbitrary code.
+
+Solution.
+A patch is available from the vendor and will be included in the
+next release. 
+
+The patch can be downloaded from: 
+http://www.thegreenbow.com/download.php?id=1000150
+
+Discovered by.
+Brett Gervasoni from SOS Labs.

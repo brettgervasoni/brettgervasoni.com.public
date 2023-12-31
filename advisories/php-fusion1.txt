@@ -1,0 +1,37 @@
+Origan http://secunia.com/advisories/12686/
+--------------------------------------------
+
+Secunia Advisory:	SA12686	Print Advisory  
+Release Date:	2004-09-30
+Last Update:	2004-12-10
+
+Critical:	
+Moderately critical
+Impact:	Cross Site Scripting
+Manipulation of data
+Where:	From remote
+Solution Status:	Unpatched
+
+Software:	PHP-Fusion 4.x
+
+	Select a product and view a complete list of all Patched/Unpatched Secunia advisories affecting it.
+
+Description:
+r0ut3r has discovered some vulnerabilities in PHP-Fusion, which can be exploited by malicious people to conduct SQL injection and script insertion attacks.
+
+1) Input passed to the the "rowstart" parameter in "index.php" and "members.php", and the "comment_id" parameter in "comments.php" isn't properly sanitised before being used in a SQL query. This can be exploited to manipulate SQL queries by injecting arbitrary SQL code.
+
+Successful exploitation requires user to be authenticated in "members.php". Access to "comments.php" requires administrator privileges.
+
+2) Input passed to fields in "Submit News", "Submit Link", and "Submit Article" is not properly sanitised before being used. This can be exploited to inject arbitrary HTML and script code, which will be executed in an administrator's browser session in context of an affected site when the malicious user data is viewed.
+
+The vulnerabilities have been confirmed on version 4.01 with security update applied. Other versions may also be affected.
+
+Solution:
+Edit the source code to ensure that input is properly sanitised.
+
+Provided and/or discovered by:
+r0ut3r
+
+Changelog:
+2004-12-10: Added further information. Updated "Description" section.

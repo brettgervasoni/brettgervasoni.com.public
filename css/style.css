@@ -1,0 +1,23 @@
+.social {
+	margin-top: 8px;
+	margin-right: 12px;
+	float: right;
+}
+
+.container {
+	max-width: 900px;
+}
+
+.list-group {
+	margin-top: 20px;
+}
+
+.list-group-item {
+	padding: 5px 8px;
+}
+
+#footer {
+	float: right;
+	margin-right: 12px;
+	margin-bottom: 10px;
+}

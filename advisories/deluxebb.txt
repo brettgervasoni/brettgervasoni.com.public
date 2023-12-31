@@ -1,0 +1,40 @@
+DeluxeBB "templatefolder" File Inclusion Vulnerability
+
+Secunia Advisory: 	SA22176 	 
+Release Date: 	2006-10-02
+Last Update: 	2006-10-05
+
+Critical: 	
+Moderately critical
+Impact: 	Exposure of sensitive information
+Where: 	From remote
+Solution Status: 	Vendor Patch
+
+Software:	DeluxeBB 1.x
+
+CVE reference:	CVE-2006-5154 (Secunia mirror)
+
+Description:
+r0ut3r has reported a vulnerability in DeluxeBB, which can be exploited by malicious people to disclose sensitive information.
+
+Input passed to the "templatefolder" parameter is not properly verified before being used to include files. This can be exploited to include arbitrary files from local resources.
+
+Example:
+http://[host]/templates/deluxe/cp/sig.php?settings[smilies]=on&templatefolder=[file]%00
+
+Successful exploitation requires that "register_globals" is enabled and "magic_quotes_gpc" is disabled.
+
+The vulnerability has been reported in version 1.09. Prior versions may also be affected.
+
+Solution:
+The vulnerability has been fixed in an updated version 1.09.
+http://www.deluxebb.com/main.php?content=downloads
+
+Apply patch.
+http://www.deluxebb.com/community/topic.php?tid=420
+
+Provided and/or discovered by:
+r0ut3r
+
+Changelog:
+2006-10-05: Added CVE reference.

@@ -1,0 +1,51 @@
+Origan http://secunia.com/advisories/13718/
+-------------------------------------------- 
+
+TITLE:
+b2evolution "title" SQL Injection Vulnerability
+
+SECUNIA ADVISORY ID:
+SA13718
+
+VERIFY ADVISORY:
+http://secunia.com/advisories/13718/
+
+CRITICAL:
+Moderately critical
+
+IMPACT:
+Manipulation of data
+
+WHERE:
+From remote
+
+SOFTWARE:
+b2evolution 0.x
+http://secunia.com/product/2126/
+
+DESCRIPTION:
+r0ut3r has reported a vulnerability in b2evolution, which can be
+exploited by malicious people to conduct SQL injection attacks.
+
+Input passed to the "title" parameter in "index.php" is not properly
+sanitised before being used in a SQL query. This can be exploited to
+manipulate SQL queries by injecting arbitrary SQL code.
+
+SOLUTION:
+Edit the source code to ensure that input is properly sanitised.
+
+PROVIDED AND/OR DISCOVERED BY:
+r0ut3r
+
+----------------------------------------------------------------------
+
+About:
+This Advisory was delivered by Secunia as a free service to help
+everybody keeping their systems up to date against the latest
+vulnerabilities.
+
+Subscribe:
+http://secunia.com/secunia_security_advisories/
+
+Definitions: (Criticality, Where etc.)
+http://secunia.com/about_secunia_advisories/

