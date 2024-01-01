@@ -31,4 +31,4 @@ admin/listdesign.php
 
 Note: This information is displayed on the front page
 
-Fix, add some authentication. In the mean time use .htaccess in the admin/ directory. For .htaccess demo view bottom of http://milw0rm.com/exploits/2768
+Fix, add authentication. In the mean time use .htaccess in the admin/ directory. For .htaccess demo view bottom of http://milw0rm.com/exploits/2768

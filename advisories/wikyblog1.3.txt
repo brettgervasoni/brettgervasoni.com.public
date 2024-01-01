@@ -1,9 +1,4 @@
 #################################################################################################
-#                                    r0ut3r Presents...                                         #
-#                                                                                               #
-#                                Another r0ut3r discovery!                                      #
-#                                  writ3r [at] gmail.com                                        #
-#                                                                                               #
 #                          WikyBlog Local File Inclusion Exploit                                #
 #################################################################################################
 # Software: WikyBlog 1.3                                                                        #
@@ -36,9 +31,6 @@ $folder = @ARGV[1]; # /wikyblog/
 sub Header()
 {
 	print q {#################################################################################################
-#                                    r0ut3r Presents...                                         #
-#                                                                                               #
-#                                Another r0ut3r discovery!                                      #
 #                                  writ3r [at] gmail.com                                        #
 #                                                                                               #
 #                          WikyBlog Local File Inclusion Exploit                                #

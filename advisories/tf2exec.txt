@@ -45,9 +45,6 @@ sub Header()
 {
 	print q
 	{#################################################################################################
-#                                    r0ut3r Presents...                                         #
-#                                                                                               #
-#                                Another r0ut3r discovery!                                      #
 #                                  writ3r [at] gmail.com                                        #
 #                                                                                               #
 #                         TorrentFlux 2.2 Command Execution Exploit                             #
@@ -116,6 +113,3 @@ while ($cmd !~ "exit")
 
 print "[!] Connection to host lost...\n";
 
-#################################################################################################
-#               This has been another r0ut3r discovery - writ3r [at] gmail.com                  #
-#################################################################################################

@@ -70,6 +70,3 @@ Solution 2:
 -----------
 Set up .htaccess and only allow certain people to login until an offical patch is released. 
 
-----------------------------------------------------------------------------------------------
-              This has been another r0ut3r discovery (writ3r [ at ] gmail.com)
-----------------------------------------------------------------------------------------------

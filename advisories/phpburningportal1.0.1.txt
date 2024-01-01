@@ -60,8 +60,6 @@ sub header()
     {
 ########################################################################
     phpBurningPortal quiz-modul-1.0.1 - Remote File Include Exploit
-               Vulnerability discovered and exploit by r0ut3r
-                       writ3r@gmail.com
             For portal administrator testing purposes only!
 ########################################################################
     };

@@ -12,13 +12,11 @@
 * window.location='http://BUFFER';
 *
 * Use below code, or grab yourself a copy of sb.php
-* r0ut3r@kit:~/public_html> php sb.php -g 20000000 -os source.html
+* r0ut3r@:~/public_html> php sb.php -g 20000000 -os source.html
 * [i] Wrote to file: loaded.html
 *
 * SB: http://www.brettgervasoni.com/download/5/
 *
-* Greets to JB (http://jbrownsec.blogspot.com), the reason
-* this was found!
 *
 * Written and discovered by:
 * r0ut3r (writ3r [at] gmail.com / www.brettgervasoni.com)
